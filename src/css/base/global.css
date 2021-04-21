@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--white-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--page-width);
+
+  @media (--mq-md) {
+    max-width: var(--page-width-md);
+  }
+
+  @media (--mq-sm) {
+    max-width: 100%;
+  }
+}
+
+.container-mobile {
+  @media (--mq-sm) {
+    padding: 0 13px;
+  }
+}

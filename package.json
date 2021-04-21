@@ -1,0 +1,41 @@
+{
+  "name": "gulp-html-postcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development gulp dev",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead",
+    "> 0.2%"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "browser-sync": "^2.26.12",
+    "cross-env": "^7.0.2",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.1.1",
+    "postcss-csso": "^5.0.0",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-custom-properties": "^10.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^5.0.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
+  }
+}

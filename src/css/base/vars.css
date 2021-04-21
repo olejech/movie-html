@@ -1,0 +1,26 @@
+:root {
+  /* Page */
+  --page-width: 1144px;
+  --page-width-md: 648px;
+  --page-width-sm: 356px;
+
+  /* Fonts */
+  --font-family: 'Open Sans', sans-serif;
+  --font-size: 11px;
+  --line-height: 15px;
+
+  /* Colors */
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --blue-color: #3164c5;
+  --dark-blue-color: #0b5ac2;
+  --grey-color: #d2d2d2;
+  --light-grey-color: #dedede;
+  --green-color: #088319;
+  --text-color: #292929;
+
+  --transition: 0.25s ease-out;
+}
+
+@custom-media --mq-md (max-width: 1200px); /* Tablet */
+@custom-media --mq-sm (max-width: 767px); /* Mobile */

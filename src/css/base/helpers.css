@@ -1,0 +1,11 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}

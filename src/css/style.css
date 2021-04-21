@@ -1,0 +1,17 @@
+@import 'normalize.css';
+
+/* Base */
+@import './base/vars.css';
+@import './base/global.css';
+@import './base/helpers.css';
+
+/* Layout */
+@import './layout/header.css';
+
+/* Components */
+@import './components/button.css';
+@import './components/hero.css';
+@import './components/download.css';
+@import './components/separator.css';
+@import './components/reviews.css';
+@import './components/payment.css';

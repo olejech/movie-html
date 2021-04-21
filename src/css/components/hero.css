@@ -1,0 +1,21 @@
+.hero {
+  &__bg {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 632px;
+    margin-bottom: 25px;
+
+    @media (--mq-md) {
+      height: 361px;
+      margin-bottom: 23px;
+    }
+
+    @media (--mq-sm) {
+      height: 243px;
+      margin-bottom: 25px;
+    }
+  }
+}

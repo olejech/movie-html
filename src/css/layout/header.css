@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+
+  &__logo {
+    max-width: 135px;
+  }
+
+  &__icons {
+    display: flex;
+
+    @media (--mq-sm) {
+      display: none;
+    }
+  }
+
+  &__icon + &__icon {
+    margin-left: 21px;
+  }
+
+  @media (--mq-sm) {
+    padding: 15px 16px;
+  }
+}
