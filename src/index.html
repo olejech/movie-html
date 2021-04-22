@@ -34,7 +34,7 @@
               You are not registered yet! To download these titles and more…
               without limit, you have to activate your account!
             </div>
-            <button class="button hero__button uppercase">
+            <button class="button hero__button uppercase js-button-modal-open">
               Create a free account now
             </button>
           </div>
@@ -137,6 +137,34 @@
         </article>
       </section>
     </main>
+
+    <div class="modal-window js-modal">
+      <button class="modal-window__close js-button-modal-close"></button>
+      <div class="modal-window__content">
+        <h2 class="modal-window__title">Create your FREE access</h2>
+        <p class="modal-window__subtitle">
+          You must be registered to access unlimited downloads and content.
+        </p>
+
+        <form>
+          <input
+            class="text-field text-field_icon text-field_email modal-window__text-field"
+            type="text"
+            placeholder="Enter your email address"
+          />
+          <input
+            class="text-field text-field_icon text-field_password modal-window__text-field"
+            type="text"
+            placeholder="Create your password"
+          />
+          <button type="submit" class="button modal-window__button uppercase">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal__overlay js-overlay"></div>
 
     <script src="./js/index.js"></script>
   </body>

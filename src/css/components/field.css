@@ -1,0 +1,35 @@
+.text-field {
+  display: block;
+  width: 100%;
+  padding: 20px 20px 20px;
+  border: 2px solid #dfdfdf;
+  border-radius: 3px;
+  color: #757575;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+
+  &::placeholder {
+    color: #757575;
+  }
+
+  & + & {
+    margin-top: 27px;
+  }
+
+  &_icon {
+    padding: 19px 20px 19px 55px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &_email {
+    background-image: url('../images/icons/letter.png');
+  }
+
+  &_password {
+    background-image: url('../images/icons/lock.png');
+    background-size: 50px;
+    background-position: 6px 4px;
+  }
+}

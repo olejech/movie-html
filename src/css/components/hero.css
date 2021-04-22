@@ -46,8 +46,9 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
-    opacity: 0;
     animation: transition-background 1s linear 3s forwards;
+    opacity: 0;
+    visibility: hidden;
 
     @media (--mq-sm) {
       font-size: 14px;
@@ -88,10 +89,12 @@
   0% {
     background-color: rgba(0, 0, 0, 0);
     opacity: 0;
+    visibility: visible;
   }
 
   100% {
     background-color: rgba(0, 0, 0, 1);
     opacity: 1;
+    visibility: visible;
   }
 }

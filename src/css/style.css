@@ -14,4 +14,6 @@
 @import './components/download.css';
 @import './components/separator.css';
 @import './components/reviews.css';
+@import './components/modal.css';
+@import './components/field.css';
 @import './components/payment.css';

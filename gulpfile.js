@@ -10,6 +10,9 @@ const postCssCustomMedia = require('postcss-custom-media')
 const sourcemaps = require('gulp-sourcemaps')
 const browserSync = require('browser-sync')
 const htmlMin = require('gulp-htmlmin')
+const uglify = require('gulp-uglify')
+const webpackStream = require('webpack-stream')
+const { webpackDevConfig, webpackProdConfig } = require('./webpack.config.js')
 
 const env = process.env.NODE_ENV
 const reload = browserSync.reload
@@ -19,15 +22,18 @@ const path = {
     // From
     css: './src/css/style.css',
     html: './src/*.html',
+    js: './src/js/*.js',
   },
   build: {
     // Where
     css: './build/css',
     html: './build',
+    js: './build/js',
   },
   watch: {
     css: './src/css/**/*.css',
     html: './src/**/*.html',
+    js: './src/**/*.js',
   },
 }
 
@@ -58,15 +64,30 @@ gulp.task('html', () => {
     .pipe(reload({ stream: true }))
 })
 
+gulp.task('js', () => {
+  console.log('js')
+  return gulp
+    .src(path.src.js)
+    .pipe(
+      webpackStream(
+        gulpIf(env === 'development', webpackDevConfig, webpackProdConfig)
+      )
+    )
+    .pipe(gulpIf(env === 'production', uglify()))
+    .pipe(gulp.dest(path.build.js))
+    .pipe(reload({ stream: true }))
+})
+
 gulp.task('watch', () => {
   browserSync.init({ server: './build' })
 
   gulp.watch(path.watch.css, gulp.series('css'))
   gulp.watch(path.watch.html, gulp.series('html'))
+  gulp.watch(path.watch.js, gulp.series('js'))
 })
 
 gulp.task(
   'dev',
-  gulp.series(gulp.series('css', 'html'), gulp.parallel('watch'))
+  gulp.series(gulp.series('css', 'html', 'js'), gulp.parallel('watch'))
 )
-gulp.task('build', gulp.series('css', 'html'))
+gulp.task('build', gulp.series('css', 'html', 'js'))
