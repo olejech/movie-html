@@ -1,0 +1,31 @@
+.success-page {
+  margin: 129px 140px;
+  text-align: center;
+
+  @media (--mq-md) {
+    margin: 74px 75px;
+  }
+
+  @media (--mq-sm) {
+    margin: 45px 31px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #13151a;
+  }
+
+  &__subtitle {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  a {
+    color: #1f0bb8;
+    text-decoration: underline;
+  }
+}

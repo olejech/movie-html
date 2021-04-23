@@ -10,7 +10,7 @@
   <body>
     <main class="payment-main">
       <div class="payment-form-wrap">
-        <form class="payment-form">
+        <form class="payment-form js-form">
           <div class="payment-form__container">
             <div class="payment-form-header">
               <div>
@@ -57,6 +57,12 @@
             </div>
             <div class="payment-form__info-subtitle">
               256-bit TLS verification
+            </div>
+          </div>
+
+          <div class="payment-form__error js-error-message">
+            <div class="payment-form__error-message">
+              Your transaction has failed. Please try another credit card.
             </div>
           </div>
 
@@ -257,5 +263,19 @@
         </div>
       </div>
     </main>
+
+    <div class="popup js-popup">
+      <button class="popup__close js-popup-close" type="button"></button>
+      We are processing your subscription<br />
+      This may take up to 2 minutes
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>

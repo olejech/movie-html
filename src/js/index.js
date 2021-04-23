@@ -1,3 +1,5 @@
+import './payment'
+
 const $buttonOpen = document.querySelector('.js-button-modal-open')
 const $buttonClose = document.querySelector('.js-button-modal-close')
 const $modal = document.querySelector('.js-modal')
@@ -21,6 +23,8 @@ function handleClickOutside(e) {
   }
 }
 
-$buttonOpen.onclick = handleClickOpen
-$buttonClose.onclick = handleClickClose
+if ($buttonOpen && $buttonClose) {
+  $buttonOpen.onclick = handleClickOpen
+  $buttonClose.onclick = handleClickClose
+}
 document.body.onclick = handleClickOutside
