@@ -4,6 +4,7 @@ const $buttonOpen = document.querySelector('.js-button-modal-open')
 const $buttonClose = document.querySelector('.js-button-modal-close')
 const $modal = document.querySelector('.js-modal')
 const $overlay = document.querySelector('.js-overlay')
+const $form = document.querySelector('.js-form-main')
 
 function handleClickClose() {
   $modal.classList.remove('active')
@@ -23,8 +24,17 @@ function handleClickOutside(e) {
   }
 }
 
+function handleSubmit(e) {
+  e.preventDefault()
+  window.location.href = '/unlimitedtitles/payment.html'
+}
+
 if ($buttonOpen && $buttonClose) {
   $buttonOpen.onclick = handleClickOpen
   $buttonClose.onclick = handleClickClose
+}
+
+if ($form) {
+  $form.onsubmit = handleSubmit
 }
 document.body.onclick = handleClickOutside

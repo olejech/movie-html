@@ -11,7 +11,7 @@ if (form) {
       popup.classList.add('active')
 
       setTimeout(() => {
-        popup.classList.remove('active')
+        window.location.href = '/unlimitedtitles/success.html'
       }, 3000)
     } else {
       errorMessage.classList.add('active')
