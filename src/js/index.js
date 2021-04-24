@@ -1,6 +1,7 @@
 import './payment'
 
 const $buttonOpen = document.querySelector('.js-button-modal-open')
+const $buttonDownload = document.querySelector('.js-button-download')
 const $buttonClose = document.querySelector('.js-button-modal-close')
 const $modal = document.querySelector('.js-modal')
 const $overlay = document.querySelector('.js-overlay')
@@ -29,8 +30,9 @@ function handleSubmit(e) {
   window.location.href = '/unlimitedtitles/payment.html'
 }
 
-if ($buttonOpen && $buttonClose) {
+if ($buttonOpen && $buttonClose && $buttonDownload) {
   $buttonOpen.onclick = handleClickOpen
+  $buttonDownload.onclick = handleClickOpen
   $buttonClose.onclick = handleClickClose
 }
 

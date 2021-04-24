@@ -20,7 +20,7 @@ const reload = browserSync.reload
 const path = {
   src: {
     // From
-    css: './src/css/style.css',
+    css: './src/css/*.css',
     html: './src/*.html',
     js: './src/js/*.js',
   },

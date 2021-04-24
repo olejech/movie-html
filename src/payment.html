@@ -5,264 +5,291 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/payment-style.css" />
   </head>
   <body>
     <main class="payment-main">
-      <div class="payment-form-wrap">
-        <form class="payment-form js-form">
-          <div class="payment-form__container">
-            <div class="payment-form-header">
-              <div>
-                <div class="payment-form-header__title">
-                  1 FREE ACCESS Membership
-                </div>
-                <div class="payment-form-header__rating">
-                  <div class="payment-form-header__stars">
-                    <div
-                      class="payment-form-header__star payment-form-header__star_filled"
-                    ></div>
-                    <div
-                      class="payment-form-header__star payment-form-header__star_filled"
-                    ></div>
-                    <div
-                      class="payment-form-header__star payment-form-header__star_filled"
-                    ></div>
-                    <div
-                      class="payment-form-header__star payment-form-header__star_filled"
-                    ></div>
-                    <div
-                      class="payment-form-header__star payment-form-header__star_outline"
-                    ></div>
+      <div class="payment-main__wrap">
+        <div class="payment-form-wrap">
+          <form class="payment-form js-form">
+            <div class="payment-form__container">
+              <div class="payment-form-header">
+                <div>
+                  <div class="payment-form-header__title">
+                    1 FREE ACCESS Membership
                   </div>
-                  <div class="payment-form-header__rating-count">
-                    Based on 1,264,821 reviews
+                  <div class="payment-form-header__rating">
+                    <div class="payment-form-header__stars">
+                      <div
+                        class="payment-form-header__star payment-form-header__star_filled"
+                      ></div>
+                      <div
+                        class="payment-form-header__star payment-form-header__star_filled"
+                      ></div>
+                      <div
+                        class="payment-form-header__star payment-form-header__star_filled"
+                      ></div>
+                      <div
+                        class="payment-form-header__star payment-form-header__star_filled"
+                      ></div>
+                      <div
+                        class="payment-form-header__star payment-form-header__star_outline"
+                      ></div>
+                    </div>
+                    <div class="payment-form-header__rating-count">
+                      Based on 1,264,821 reviews
+                    </div>
+                  </div>
+                </div>
+                <div class="payment-form-header__sum">$0.00</div>
+              </div>
+
+              <p class="payment-form__warning">
+                Your credit/debit card will not be charged for the free access
+                membership
+              </p>
+            </div>
+
+            <hr class="payment-form__separator" />
+
+            <div class="payment-form__info">
+              <div class="payment-form__info-title uppercase">
+                Secure and encrypted
+              </div>
+              <div class="payment-form__info-subtitle">
+                256-bit TLS verification
+              </div>
+            </div>
+
+            <div class="payment-form__error js-error-message">
+              <div class="payment-form__error-message">
+                Your transaction has failed. Please try another credit card.
+              </div>
+            </div>
+
+            <div class="payment-form__container">
+              <div
+                class="payment-form__text-field-wrap payment-form__text-field-wrap_name"
+              >
+                <input
+                  type="text"
+                  class="payment-form__text-field payment-form__text-field_icon payment-form__text-field_name"
+                  placeholder="First Name"
+                />
+                <input
+                  type="text"
+                  class="payment-form__text-field payment-form__text-field_icon payment-form__text-field_name"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <input
+                id="address"
+                type="text"
+                class="payment-form__text-field"
+                placeholder="Address"
+              />
+
+              <div class="payment-form__text-field-wrap">
+                <div class="payment-form__text-field-wrap-column">
+                  <input
+                    id="city"
+                    type="text"
+                    class="payment-form__text-field"
+                    placeholder="City"
+                  />
+                </div>
+
+                <div class="payment-form__text-field-wrap-column">
+                  <input
+                    id="state"
+                    type="text"
+                    class="payment-form__text-field"
+                    placeholder="State"
+                  />
+                </div>
+              </div>
+
+              <div class="payment-form__text-field-wrap">
+                <div class="payment-form__text-field-wrap-column">
+                  <input
+                    id="zip"
+                    type="text"
+                    class="payment-form__text-field"
+                    placeholder="Zip/Postal Code"
+                  />
+                </div>
+
+                <div class="payment-form__text-field-wrap-column">
+                  <div class="payment-form__select-wrap">
+                    <select id="country" class="payment-form__select">
+                      <option disabled selected>Country</option>
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                    </select>
                   </div>
                 </div>
               </div>
-              <div class="payment-form-header__sum">$0.00</div>
-            </div>
 
-            <p class="payment-form__warning">
-              Your credit/debit card will not be charged for the free access
-              membership
-            </p>
-          </div>
-
-          <hr class="payment-form__separator" />
-
-          <div class="payment-form__info">
-            <div class="payment-form__info-title uppercase">
-              Secure and encrypted
-            </div>
-            <div class="payment-form__info-subtitle">
-              256-bit TLS verification
-            </div>
-          </div>
-
-          <div class="payment-form__error js-error-message">
-            <div class="payment-form__error-message">
-              Your transaction has failed. Please try another credit card.
-            </div>
-          </div>
-
-          <div class="payment-form__container">
-            <div
-              class="payment-form__text-field-wrap payment-form__text-field-wrap_name"
-            >
               <input
+                id="card"
                 type="text"
-                class="payment-form__text-field payment-form__text-field_icon payment-form__text-field_name"
-                placeholder="First Name"
+                class="payment-form__text-field payment-form__text-field_icon payment-form__text-field_card"
+                placeholder="Card Number"
               />
-              <input
-                type="text"
-                class="payment-form__text-field payment-form__text-field_icon payment-form__text-field_name"
-                placeholder="Last Name"
-              />
-            </div>
 
-            <label for="address" class="payment-form__text-label"
-              >Address</label
-            >
-            <input
-              id="address"
-              type="text"
-              class="payment-form__text-field"
-              placeholder="Address"
-            />
-
-            <div class="payment-form__text-field-wrap">
-              <div class="payment-form__text-field-wrap-column">
-                <label for="city" class="payment-form__text-label">City</label>
-                <input
-                  id="city"
-                  type="text"
-                  class="payment-form__text-field"
-                  placeholder="City"
-                />
-              </div>
-
-              <div class="payment-form__text-field-wrap-column">
-                <label for="state" class="payment-form__text-label"
-                  >State</label
-                >
-                <input
-                  id="state"
-                  type="text"
-                  class="payment-form__text-field"
-                  placeholder="State"
-                />
-              </div>
-            </div>
-
-            <div class="payment-form__text-field-wrap">
-              <div class="payment-form__text-field-wrap-column">
-                <label for="zip" class="payment-form__text-label"
-                  >Zip/Postal Code</label
-                >
-                <input
-                  id="zip"
-                  type="text"
-                  class="payment-form__text-field"
-                  placeholder="Zip/Postal Code"
-                />
-              </div>
-
-              <div class="payment-form__text-field-wrap-column">
-                <label for="country" class="payment-form__text-label"
-                  >Country</label
-                >
-                <div class="payment-form__select-wrap">
-                  <select id="country" class="payment-form__select">
-                    <option disabled selected>Country</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                  </select>
+              <div class="payment-form__cvv">
+                <div>
+                  <input
+                    id="cvv"
+                    type="text"
+                    class="payment-form__text-field payment-form__text-field_icon payment-form__text-field_cvv"
+                    placeholder="CVV"
+                  />
                 </div>
-              </div>
-            </div>
 
-            <label for="card" class="payment-form__text-label"
-              >Card Number:</label
-            >
-            <input
-              id="card"
-              type="text"
-              class="payment-form__text-field payment-form__text-field_icon payment-form__text-field_card"
-              placeholder="Card Number"
-            />
-
-            <div class="payment-form__cvv">
-              <div>
-                <label for="cvv" class="payment-form__text-label"
-                  >Security Code:</label
-                >
-                <input
-                  id="cvv"
-                  type="text"
-                  class="payment-form__text-field payment-form__text-field_icon payment-form__text-field_cvv"
-                  placeholder="CVV"
-                />
+                <a class="payment-form__info-security-code" href="#">
+                  What’s the security code?
+                </a>
               </div>
 
-              <a class="payment-form__info-security-code" href="#">
-                What’s the security code?
-              </a>
-            </div>
+              <div class="payment-form__text-field-wrap">
+                <div class="payment-form__text-field-wrap-column">
+                  <div class="payment-form__select-wrap">
+                    <select
+                      id="expiry"
+                      class="payment-form__select payment-form__select_last"
+                    >
+                      <option disabled selected>MM</option>
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                    </select>
+                  </div>
+                </div>
 
-            <div class="payment-form__text-field-wrap">
-              <div class="payment-form__text-field-wrap-column">
-                <label for="expiry" class="payment-form__text-label"
-                  >Expiry Date:</label
-                >
-                <div class="payment-form__select-wrap">
-                  <select
-                    id="expiry"
-                    class="payment-form__select payment-form__select_last"
-                  >
-                    <option disabled selected>MM</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                  </select>
+                <div class="payment-form__text-field-wrap-column">
+                  <div class="payment-form__select-wrap">
+                    <select
+                      class="payment-form__select payment-form__select_last"
+                    >
+                      <option disabled selected>MM</option>
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
-              <div class="payment-form__text-field-wrap-column">
-                <div class="payment-form__select-wrap">
-                  <select
-                    class="payment-form__select payment-form__select_last"
-                  >
-                    <option disabled selected>MM</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                  </select>
-                </div>
+              <div class="payment-form__question">
+                Why your credit/debit card
+              </div>
+
+              <div class="payment-form__answer">
+                We only own content rights for some countries. This is why we
+                need to verify your geographic location with a valid
+                credit/debit card. Your membership granting you access to all
+                our movies is free unless you decide to switch to Premium after
+                the 5-day free access membership. Free 5-day trial rebilling at
+                $39.99 per month nless cancelled. By clicking continue I agree
+                to the
+                <a href="#">Terms of Service</a> and
+                <a href="#">Privacy Policy</a>.
+              </div>
+
+              <button
+                type="submit"
+                class="button payment-form__button uppercase"
+              >
+                Continue
+              </button>
+
+              <div class="payment-form__footer">
+                This charge will appear on your cardholder statement as
+                net-str.com 8553827128
               </div>
             </div>
-
-            <div class="payment-form__question">Why your credit/debit card</div>
-
-            <div class="payment-form__answer">
-              We only own content rights for some countries. This is why we need
-              to verify your geographic location with a valid credit/debit card.
-              Your membership granting you access to all our movies is free
-              unless you decide to switch to Premium after the 5-day free access
-              membership. Free 5-day trial rebilling at $39.99 per month nless
-              cancelled.
-            </div>
-
-            <button type="submit" class="button payment-form__button uppercase">
-              Continue
-            </button>
-
-            <div class="payment-form__footer">
-              This charge will appear on your cardholder statement as
-              net-str.com 8553827128
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="payment-features">
-        <div class="payment-features__feature payment-features__feature_ads">
-          <div>
-            <div class="payment-features__feature__title">Ads-Free</div>
-            <div
-              class="payment-features__feature__text payment-features__feature__text_ads"
-            >
-              View your titles uninterrupted
-            </div>
-          </div>
+          </form>
         </div>
 
-        <div class="payment-features__feature payment-features__feature_hd">
-          <div>
-            <div class="payment-features__feature__title">
-              HD-Quality Movies
-            </div>
-            <div
-              class="payment-features__feature__text payment-features__feature__text_hd"
-            >
-              All titles available in HD
+        <div class="payment-features payment-features_column">
+          <div class="payment-features__feature payment-features__feature_ads">
+            <div>
+              <div class="payment-features__feature__title">Ads-Free</div>
+              <div
+                class="payment-features__feature__text payment-features__feature__text_ads"
+              >
+                View your titles uninterrupted
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          class="payment-features__feature payment-features__feature_infinity"
-        >
-          <div>
-            <div class="payment-features__feature__title">Unlimited Access</div>
-            <div
-              class="payment-features__feature__text payment-features__feature__text_infinity"
-            >
-              Unlimited views of our entire catalogue
+          <div class="payment-features__feature payment-features__feature_hd">
+            <div>
+              <div class="payment-features__feature__title">
+                HD-Quality Movies
+              </div>
+              <div
+                class="payment-features__feature__text payment-features__feature__text_hd"
+              >
+                All titles available in HD
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="payment-features__feature payment-features__feature_infinity"
+          >
+            <div>
+              <div class="payment-features__feature__title">
+                Unlimited Access
+              </div>
+              <div
+                class="payment-features__feature__text payment-features__feature__text_infinity"
+              >
+                Unlimited views of our entire catalogue
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+
+    <div class="payment-bg-mobile"></div>
+
+    <div class="payment-features payment-features_row">
+      <div class="payment-features__feature payment-features__feature_ads">
+        <div>
+          <div class="payment-features__feature__title">Ads-Free</div>
+          <div
+            class="payment-features__feature__text payment-features__feature__text_ads"
+          >
+            View your titles uninterrupted
+          </div>
+        </div>
+      </div>
+
+      <div class="payment-features__feature payment-features__feature_hd">
+        <div>
+          <div class="payment-features__feature__title">HD-Quality Movies</div>
+          <div
+            class="payment-features__feature__text payment-features__feature__text_hd"
+          >
+            All titles available in HD
+          </div>
+        </div>
+      </div>
+
+      <div class="payment-features__feature payment-features__feature_infinity">
+        <div>
+          <div class="payment-features__feature__title">Unlimited Access</div>
+          <div
+            class="payment-features__feature__text payment-features__feature__text_infinity"
+          >
+            Unlimited views of our entire catalogue
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="popup js-popup">
       <button class="popup__close js-popup-close" type="button"></button>
